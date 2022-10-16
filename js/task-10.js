@@ -12,16 +12,20 @@ function getRandomHexColor() {
 
 function createBoxes(amount) {
   amount = inputRef.value;
+  const arrOfDivs = [];
   let sizeDiv = 30;
   while (0 < amount) {
-    const backgroundColor = getRandomHexColor();
-    boxesRef.insertAdjacentHTML(
-      "beforeend",
-      `<div class = "aaa" style = "background-color: ${backgroundColor}; width: ${sizeDiv}px; height: ${sizeDiv}px"></div>`
-    );
+    const bgcOfDiv = getRandomHexColor();
+    const div = document.createElement("div");
+    div.style.backgroundColor = bgcOfDiv;
+    div.style.width = `${sizeDiv}px`;
+    div.style.height = `${sizeDiv}px`;
+    arrOfDivs.push(div);
     amount -= 1;
     sizeDiv += 10;
   }
+  boxesRef.append(...arrOfDivs);
+  console.log();
 }
 
 function destroyBoxes() {

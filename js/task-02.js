@@ -9,7 +9,9 @@ const ingredients = [
 
 const listRef = document.querySelector("#ingredients");
 
-const liRef = ingredients
-  .map((ingredient) => `<li>${ingredient}</li>`)
-  .join("");
-listRef.insertAdjacentHTML("afterbegin", liRef);
+const liRef = ingredients.map((ingredient) => {
+  const li = document.createElement("li");
+  li.textContent = ingredient;
+  return li;
+});
+listRef.append(...liRef);
