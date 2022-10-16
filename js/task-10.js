@@ -15,9 +15,8 @@ function createBoxes(amount) {
   const arrOfDivs = [];
   let sizeDiv = 30;
   while (0 < amount) {
-    const bgcOfDiv = getRandomHexColor();
     const div = document.createElement("div");
-    div.style.backgroundColor = bgcOfDiv;
+    div.style.backgroundColor = getRandomHexColor();
     div.style.width = `${sizeDiv}px`;
     div.style.height = `${sizeDiv}px`;
     arrOfDivs.push(div);
