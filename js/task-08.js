@@ -2,7 +2,6 @@ const form = document.querySelector(".login-form");
 const buttunLoginRef = document.querySelector(".login-form button");
 
 form.addEventListener("submit", onFormSubmit);
-
 function onFormSubmit(event) {
   event.preventDefault();
 
@@ -14,6 +13,8 @@ function onFormSubmit(event) {
     alert("Please fill in all the fields!");
     return;
   }
-  console.log(`email: ${email.value}, Password: ${password.value}`);
+  // console.log(`email: ${email.value}, password: ${password.value}`);
   event.currentTarget.reset();
+  console.log(form.elements.email);
+  console.log(form.elements.email.event);
 }

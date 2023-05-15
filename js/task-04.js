@@ -1,7 +1,7 @@
 const refs = {
   deductBtn: document.querySelector('button[data-action="decrement"]'),
   addBtn: document.querySelector('button[data-action="increment"]'),
-  valueRef: document.querySelector("#value"),
+  valueRef: document.querySelector("h1"),
 };
 
 refs.deductBtn.addEventListener("click", onDeductBtnClick);
